@@ -48,7 +48,7 @@ class Service
         $this->kit->getConfig()->setAccessToken($jwt->getResult()->getAccessToken());
     }
 
-    function handleChat2DeskEvent(string $event)
+    public function handleChat2DeskEvent(string $event)
     {
         $incoming = json_decode($event);
 
@@ -94,7 +94,7 @@ class Service
         }
     }
 
-    function handleKitEvent(string $event)
+    public function handleKitEvent(string $event)
     {
         $eventObj = json_decode($event);
         if ($eventObj->event_type == 'send_message') {
