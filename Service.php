@@ -3,19 +3,19 @@
 namespace Chat2Desk;
 
 use Exception;
-use VoximplantKit\Model\MessagingEventMessageType;
-use VoximplantKit\Model\MessagingIncomingEventType;
-use VoximplantKit\Model\MessagingIncomingEventTypeClientData;
-use VoximplantKit\Model\MessagingIncomingEventTypeEventData;
+use VoximplantKitIM\Model\MessagingEventMessageType;
+use VoximplantKitIM\Model\MessagingIncomingEventType;
+use VoximplantKitIM\Model\MessagingIncomingEventTypeClientData;
+use VoximplantKitIM\Model\MessagingIncomingEventTypeEventData;
 use Ramsey\Uuid\Uuid;
-use VoximplantKit\Model\MessagingOutgoingChatCloseEventType;
-use VoximplantKit\Model\MessagingOutgoingNewMessageEventType;
-use VoximplantKit\ObjectSerializer;
-use VoximplantKit\VoximplantKitClient;
+use VoximplantKitIM\Model\MessagingOutgoingChatCloseEventType;
+use VoximplantKitIM\Model\MessagingOutgoingNewMessageEventType;
+use VoximplantKitIM\ObjectSerializer;
+use VoximplantKitIM\VoximplantKitIMClient;
 
 class Service
 {
-    /** @var VoximplantKitClient */
+    /** @var VoximplantKitIMClient */
     private $kit;
 
     /** @var string */
@@ -29,7 +29,7 @@ class Service
      */
     private $repository;
 
-    public function __construct(Chat2DeskClient $chat2Desc, Repository $repository, VoximplantKitClient $kit, string $channelUUID)
+    public function __construct(Chat2DeskClient $chat2Desc, Repository $repository, VoximplantKitIMClient $kit, string $channelUUID)
     {
         $this->kit = $kit;
         $this->repository = $repository;

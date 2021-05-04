@@ -10,8 +10,8 @@ use League\Flysystem\Filesystem;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Symfony\Component\Dotenv\Dotenv;
-use VoximplantKit\Configuration;
-use VoximplantKit\VoximplantKitClient;
+use VoximplantKitIM\Configuration;
+use VoximplantKitIM\VoximplantKitIMClient;
 
 // Configuration for logging
 $logger = new Monolog\Logger('name');
@@ -28,11 +28,11 @@ $cache = new FilesystemCachePool($filesystem);
 
 //Configuration for Voximplant Kit API client
 $kitConfig = new Configuration();
-$kitConfig->setHost($_ENV['KIT_API_URL']);
+$kitConfig->setHost($_ENV['KIT_IM_API_URL']);
 $kitConfig->setApiKey('domain', $_ENV['KIT_ACCOUNT_NAME']);
 $kitConfig->setApiKey('access_token', $_ENV['KIT_API_TOKEN']);
 
-$kit = new VoximplantKitClient($kitConfig);
+$kit = new VoximplantKitIMClient($kitConfig);
 
 //Configuration for chat2desc API client
 $chat2deskToken = $_ENV['CHAT2DESC_API_TOKEN'];
