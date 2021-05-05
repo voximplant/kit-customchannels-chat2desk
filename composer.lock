@@ -2953,11 +2953,11 @@
         },
         {
             "name": "voximplant/kit-imclient-php",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voximplant/kit-imclient-php",
-                "reference": "10193a90fa89186470ea1316e6e9c86b6bd318af"
+                "reference": "c4e483556afe0ed6252e7295ffdaa8523f048e1d"
             },
             "require": {
                 "ext-curl": "*",
@@ -2998,7 +2998,7 @@
                 "sdk",
                 "swagger"
             ],
-            "time": "2021-05-04T13:04:05+00:00"
+            "time": "2021-05-05T08:50:23+00:00"
         }
     ],
     "packages-dev": [],
